@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MusicWireframe" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xdz-P5-6lZ">
+                                <rect key="frame" x="16" y="44" width="382" height="373"/>
+                                <color key="backgroundColor" red="1" green="0.15418282420000001" blue="0.14109001869999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="xdz-P5-6lZ" secondAttribute="height" multiplier="343:335" id="AI6-Jj-Zh5"/>
+                                </constraints>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5uL-85-8Jd">
+                                <rect key="frame" x="44.666666666666657" y="420" width="70" height="70"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="70" id="VEZ-2v-w4T"/>
+                                    <constraint firstAttribute="height" constant="70" id="wuu-M1-XhZ"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Zo-YG-Tzg">
+                                <rect key="frame" x="172" y="420" width="70" height="70"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="HKD-BS-wC2"/>
+                                    <constraint firstAttribute="width" constant="70" id="KrE-eQ-8At"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0OA-mr-04m">
+                                <rect key="frame" x="299.33333333333331" y="420" width="70" height="70"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="1EO-0n-cBC"/>
+                                    <constraint firstAttribute="width" constant="70" id="h1s-py-q8i"/>
+                                </constraints>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="gi9-bw-zer">
+                                <rect key="frame" x="16" y="425" width="382" height="60"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NQU-Jj-kbP" userLabel="ReverseButton">
+                                        <rect key="frame" x="0.0" y="0.0" width="127.33333333333333" height="60"/>
+                                        <state key="normal" image="reverse-2"/>
+                                        <connections>
+                                            <action selector="touchDown:" destination="BYZ-38-t0r" eventType="touchDown" id="jQi-Bv-8sw"/>
+                                            <action selector="touchedUpInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Msg-BG-bra"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NqD-iy-3Rr" userLabel="PlayButton">
+                                        <rect key="frame" x="127.33333333333334" y="0.0" width="127.33333333333334" height="60"/>
+                                        <state key="normal" image="pause-2"/>
+                                        <connections>
+                                            <action selector="playPauseButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NUw-As-NEC"/>
+                                            <action selector="touchDown:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pdY-0F-yZl"/>
+                                            <action selector="touchedUpInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZG8-ch-qG7"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pi8-Cr-jxm" userLabel="ForwardButton">
+                                        <rect key="frame" x="254.66666666666671" y="0.0" width="127.33333333333334" height="60"/>
+                                        <state key="normal" image="forward"/>
+                                        <connections>
+                                            <action selector="touchDown:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Rmf-ix-0nC"/>
+                                            <action selector="touchedUpInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MbZ-y0-Au3"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="xdz-P5-6lZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="3VL-15-IUE"/>
+                            <constraint firstItem="gi9-bw-zer" firstAttribute="top" secondItem="xdz-P5-6lZ" secondAttribute="bottom" constant="8" id="CB2-PK-PaF"/>
+                            <constraint firstItem="0OA-mr-04m" firstAttribute="centerY" secondItem="pi8-Cr-jxm" secondAttribute="centerY" id="DWj-rG-Pdd"/>
+                            <constraint firstItem="5uL-85-8Jd" firstAttribute="centerX" secondItem="NQU-Jj-kbP" secondAttribute="centerX" id="Igd-6p-kf7"/>
+                            <constraint firstItem="NqD-iy-3Rr" firstAttribute="centerX" secondItem="8Zo-YG-Tzg" secondAttribute="centerX" id="Pai-fy-bSk"/>
+                            <constraint firstItem="xdz-P5-6lZ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="RQT-vV-uf9"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="xdz-P5-6lZ" secondAttribute="trailing" constant="16" id="SUI-BJ-X9Z"/>
+                            <constraint firstItem="NqD-iy-3Rr" firstAttribute="centerY" secondItem="8Zo-YG-Tzg" secondAttribute="centerY" id="dQX-xg-czN"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="gi9-bw-zer" secondAttribute="trailing" constant="16" id="fLf-k8-Byd"/>
+                            <constraint firstItem="0OA-mr-04m" firstAttribute="centerX" secondItem="pi8-Cr-jxm" secondAttribute="centerX" id="l6d-7N-JJS"/>
+                            <constraint firstItem="gi9-bw-zer" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="lwJ-Tb-Ey8"/>
+                            <constraint firstItem="5uL-85-8Jd" firstAttribute="centerY" secondItem="NQU-Jj-kbP" secondAttribute="centerY" id="muJ-nm-Yb8"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="albumImageView" destination="xdz-P5-6lZ" id="wdq-GR-aBY"/>
+                        <outlet property="forwardBackground" destination="0OA-mr-04m" id="IWJ-PD-1Vy"/>
+                        <outlet property="forwardButton" destination="pi8-Cr-jxm" id="wPg-2f-CSu"/>
+                        <outlet property="playPauseBackground" destination="8Zo-YG-Tzg" id="qCk-6i-1Ji"/>
+                        <outlet property="playPauseButton" destination="NqD-iy-3Rr" id="ovX-jd-lR1"/>
+                        <outlet property="reverseBackground" destination="5uL-85-8Jd" id="gkw-ho-2wp"/>
+                        <outlet property="reverseButton" destination="NQU-Jj-kbP" id="5q7-Fi-DfZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.23188405797103" y="133.25892857142856"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="forward" width="60" height="60"/>
+        <image name="pause-2" width="60" height="60"/>
+        <image name="reverse-2" width="60" height="60"/>
+    </resources>
+</document>
